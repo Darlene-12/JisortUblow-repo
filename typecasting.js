@@ -111,3 +111,80 @@ function runAllDemonstrations() {
 
 // Execute the demonstrations
 runAllDemonstrations();
+
+
+
+
+// String Conversions
+let strNum = String(123);          // "123"
+let strBool = String(true);        // "true"
+let strObj = String({x: 1});       // "[object Object]"
+let strArr = String([1,2,3]);      // "1,2,3"
+let strToString = "" + 123;        // "123"
+let strTemplate = `${123}`;        // "123"
+
+// Number Conversions
+let numStr = Number("123");        // 123
+let numBool = Number(true);        // 1
+let numNull = Number(null);        // 0
+let numUndef = Number(undefined);  // NaN
+let numPlus = +"123";             // 123
+let numInt = parseInt("123.45");   // 123
+let numFloat = parseFloat("123.45"); // 123.45
+let numDate = Number(new Date());  // timestamp
+
+// Boolean Conversions
+let boolStr = Boolean("hello");     // true
+let boolEmptyStr = Boolean("");     // false
+let boolNum = Boolean(123);         // true
+let boolZero = Boolean(0);          // false
+let boolObj = Boolean({});          // true
+let boolNull = Boolean(null);       // false
+let boolUndef = Boolean(undefined); // false
+let boolNot = !!"hello";           // true
+
+// Object Conversions
+let objFromStr = Object("hello");   // String {"hello"}
+let objFromNum = Object(123);       // Number {123}
+let objFromBool = Object(true);     // Boolean {true}
+
+// Array Conversions
+let arrFromStr = Array.from("hello");     // ["h","e","l","l","o"]
+let arrSplit = "1,2,3".split(",");        // ["1","2","3"]
+let arrSpread = [...new Set([1,2,3])];    // [1,2,3]
+
+// BigInt Conversions
+let bigFromNum = BigInt(123);             // 123n
+let bigFromStr = BigInt("123");           // 123n
+
+// Symbol Conversions
+let symFromStr = Symbol("hello");          // Symbol(hello)
+let symDesc = Symbol("hello").description; // "hello"
+
+// Date Conversions
+let dateFromStr = new Date("2024-02-11");  // Date object
+let dateToNum = dateFromStr.getTime();     // timestamp
+let dateToStr = dateFromStr.toISOString(); // "2024-02-11T00:00:00.000Z"
+
+// Bitwise Conversions
+let bitInt = ~~"123.45";                   // 123
+let bitBool = ~~true;                      // 1
+let bitFloat = ~~3.99;                     // 3
+
+// Binary, Octal, Hex Conversions
+let binNum = parseInt("1010", 2);          // 10
+let octNum = parseInt("12", 8);            // 10
+let hexNum = parseInt("A", 16);            // 10
+
+// Type Coercion Examples
+let coerceAdd = 5 + "5";                   // "55"
+let coerceSub = "5" - 2;                   // 3
+let coerceMult = "5" * "2";                // 10
+let coerceDiv = "10" / "2";                // 5
+let coerceCompare = "5" == 5;              // true
+let coerceStrict = "5" === 5;              // false
+
+// Array to Primitive Conversions
+let arrToStr = [1,2,3].toString();         // "1,2,3"
+let arrJoin = [1,2,3].join("-");           // "1-2-3"
+let arrValues = Array.from("123", Number);  // [1,2,3]
